@@ -15,3 +15,4 @@ FINDUTILS_CONF_ENV = \
 	gl_cv_func_wcwidth_works=yes
 
 $(eval $(autotools-package))
+$(eval $(host-autotools-package))

@@ -36,12 +36,16 @@ endif
 
 ifeq ($(BR2_PACKAGE_ZLIB),y)
 KMOD_DEPENDENCIES += zlib
+HOST_KMOD_DEPENDENCIES += host-zlib
 KMOD_CONF_OPTS += --with-zlib
+HOST_KMOD_CONF_OPTS += --with-zlib
 endif
 
 ifeq ($(BR2_PACKAGE_XZ),y)
 KMOD_DEPENDENCIES += xz
+KMOD_DEPENDENCIES += host-xz
 KMOD_CONF_OPTS += --with-xz
+HOST_KMOD_CONF_OPTS += --with-xz
 endif
 
 ifeq ($(BR2_PACKAGE_PYTHON)$(BR2_PACKAGE_PYTHON3),y)
